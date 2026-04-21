@@ -1,0 +1,7 @@
+# Force LF line endings for shell scripts (CRLF breaks shebangs on Linux)
+*.sh text eol=lf
+
+# Force LF for Docker and config files
+Dockerfile* text eol=lf
+docker-compose*.yml text eol=lf
+nginx.conf text eol=lf

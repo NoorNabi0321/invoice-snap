@@ -1,0 +1,29 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Install PostgreSQL client (psql) and bash for start.sh
+RUN apk add --no-cache postgresql-client bash
+
+# Copy package files first (layer caching)
+COPY server/package.json server/package-lock.json ./
+
+# Install all deps including devDeps for TypeScript compilation
+RUN npm ci
+
+# Copy source code and migrations
+COPY server/ ./
+
+# Compile TypeScript to JavaScript
+RUN npm run build
+
+# Remove devDependencies after build (smaller image)
+RUN npm prune --production
+
+# Copy and permission the startup script
+COPY server/scripts/start.sh /app/start.sh
+RUN chmod +x /app/start.sh
+
+EXPOSE 5000
+
+CMD ["/app/start.sh"]
