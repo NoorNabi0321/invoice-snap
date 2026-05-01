@@ -33,31 +33,31 @@ A full-stack invoice management application built with React, Node.js, and Postg
 
 | Login | Register |
 |-------|----------|
-| ![Login](screenshots/login.png) | ![Register](screenshots/register.png) |
+| ![Login](screenshots/login.PNG) | ![Register](screenshots/register.PNG) |
 
 ### Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.PNG)
 
 ### Client Management
 
 | Client List | Add Client |
 |-------------|------------|
-| ![Clients](screenshots/clients.png) | ![Add Client](screenshots/add-client.png) |
+| ![Clients](screenshots/clients.PNG) | ![Add Client](screenshots/add-client.PNG) |
 
 ### Invoice Management
 
 | Invoice List | Create Invoice |
 |-------------|----------------|
-| ![Invoices](screenshots/invoices.png) | ![Create Invoice](screenshots/create-invoice.png) |
+| ![Invoices](screenshots/invoices.PNG) | ![Create Invoice](screenshots/create-invoice.PNG) |
 
 | Invoice View | Invoice PDF |
 |-------------|-------------|
-| ![Invoice View](screenshots/invoice-view.png) | ![Invoice PDF](screenshots/invoice-pdf.png) |
+| ![Invoice View](screenshots/invoice-view.PNG) | ![Invoice PDF](screenshots/invoice-pdf.PNG) |
 
 ### Settings
 
-![Settings](screenshots/settings.png)
+![Settings](screenshots/settings.PNG)
 
 ---
 
@@ -196,26 +196,6 @@ Browser ──► Nginx (port 80)
                               Docker Volume (pgdata)
 ```
 
----
-
-## Adding Screenshots
-
-To add your own screenshots:
-
-1. Create a `screenshots/` folder in the project root
-2. Take screenshots of each page and save them as:
-   - `login.png`, `register.png`
-   - `dashboard.png`
-   - `clients.png`, `add-client.png`
-   - `invoices.png`, `create-invoice.png`
-   - `invoice-view.png`, `invoice-pdf.png`
-   - `settings.png`
-3. Commit and push:
-   ```bash
-   git add screenshots/
-   git commit -m "Add application screenshots"
-   git push
-   ```
 
 ---
 
